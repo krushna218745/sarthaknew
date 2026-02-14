@@ -1,0 +1,221 @@
+.award-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1000 50%, #0a0a0a 100%);
+}
+
+.award-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.award-main-title {
+    font-family: 'Bungee Shade', cursive;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 3s ease infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes goldShimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.award-subtitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    color: #b0b0b0;
+}
+
+.award-year {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: #FFD700;
+    margin-top: 8px;
+    letter-spacing: 3px;
+}
+
+/* Marquee */
+.marquee-container {
+    overflow: hidden;
+    background: linear-gradient(90deg, #8B0000, #CC0000, #8B0000);
+    padding: 12px 0;
+    margin-bottom: 50px;
+    border-top: 2px solid #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+.marquee {
+    display: flex;
+    animation: marqueeScroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: #FFD700;
+    letter-spacing: 2px;
+    padding-right: 50px;
+    flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+.award-card {
+    background: linear-gradient(135deg, #1a1a2e, #2a2a10);
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.award-trophy {
+    font-size: 55px;
+    display: inline-block;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+}
+
+.award-category {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    color: #FFD700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.award-name {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.award-presenter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.presented-by {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.presenter-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.award-winner {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 12px;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.winner-label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    color: #1a1a2e;
+}
+
+.winner-name {
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    letter-spacing: 2px;
+}
+
+/* Speech Bubble */
+.speech-bubble {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(26, 26, 46, 0.8);
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #FFD700;
+}
+
+.speech-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: #ffffff;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.speech-author {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: #FFD700;
+}

@@ -1,0 +1,141 @@
+.final-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: radial-gradient(ellipse at center, #1a0a2e 0%, #0a0a0a 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.final-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.final-content {
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.final-emoji-row {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.final-title {
+    font-family: 'Bungee Shade', cursive;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    background: linear-gradient(135deg, #ff2d95, #fff01f, #39ff14);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbowShift 3s ease infinite;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+@keyframes rainbowShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.final-message {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+.final-real-message {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.final-real-message p {
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.final-real-message p:last-child {
+    margin-bottom: 0;
+}
+
+.final-signature {
+    margin-bottom: 40px;
+}
+
+.final-signature p {
+    font-family: 'Permanent Marker', cursive;
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.signature-name {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.5rem !important;
+    color: #fff01f !important;
+    margin-top: 8px;
+    text-shadow: 0 0 15px rgba(255, 240, 31, 0.3);
+}
+
+.final-btn {
+    background: linear-gradient(135deg, #ff2d95, #bf00ff);
+    border: none;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    box-shadow: 0 0 30px rgba(255, 45, 149, 0.4);
+    margin-bottom: 50px;
+    transition: box-shadow 0.3s ease;
+}
+
+.final-btn:hover {
+    box-shadow: 0 0 50px rgba(255, 45, 149, 0.7);
+}
+
+.final-footer {
+    padding-top: 30px;
+    border-top: 1px solid #222;
+}
+
+.final-footer p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem !important;
+    color: #444 !important;
+    margin-top: 10px;
+}
