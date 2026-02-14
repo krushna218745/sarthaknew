@@ -8,6 +8,7 @@ import MemeWall from './components/MemeWall';
 import FinalSection from './components/FinalSection';
 import RandomPopups from './components/RandomPopups';
 import CursorEffects from './components/CursorEffects';
+import FloatingCharacters from './components/FloatingCharacters';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,7 @@ function App() {
         <>
           <CursorEffects />
           <RandomPopups />
+          <FloatingCharacters />
           <HeroSection />
           <TickerBanner />
           <RoastSection />
