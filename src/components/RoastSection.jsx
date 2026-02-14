@@ -6,32 +6,32 @@ const roasts = [
     {
         text: "Sarthak's WiFi password is probably 'password123' and he thinks he's a hacker 💀",
         emoji: '💻',
-        reaction: 'https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif',
+        reaction: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif',
     },
     {
         text: "Bro googles 'how to be cool' and takes notes 📝",
         emoji: '🤓',
-        reaction: 'https://media.giphy.com/media/IPbS5R4fSUl5S/giphy.gif',
+        reaction: 'https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif',
     },
     {
         text: "Sarthak's alarm: 6 AM. Sarthak waking up: 'maybe tomorrow' 😴",
         emoji: '⏰',
-        reaction: 'https://media.giphy.com/media/3o6wrebnKWmvx4ZBio/giphy.gif',
+        reaction: 'https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif',
     },
     {
         text: "His search history is just 'how to look busy at work' and 'best excuses for being late' 🕵️",
         emoji: '🔍',
-        reaction: 'https://media.giphy.com/media/H5C8CevNMbpBqNqFjl/giphy.gif',
+        reaction: 'https://media.giphy.com/media/3oEjI67Egb8G9jqs3m/giphy.gif',
     },
     {
         text: "Legend says Sarthak once tried to charge his phone by putting it in the microwave. Legend also says he denied it. 🤫",
         emoji: '📱',
-        reaction: 'https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif',
+        reaction: 'https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif',
     },
     {
         text: "Bro types 'lol' and sits there with a straight face 😐💀",
         emoji: '😐',
-        reaction: 'https://media.giphy.com/media/ZqlvCTNHpqrio/giphy.gif',
+        reaction: 'https://media.giphy.com/media/10JhviFuU2gWD6/giphy.gif',
     },
 ];
 

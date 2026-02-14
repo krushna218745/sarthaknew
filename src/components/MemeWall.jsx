@@ -3,35 +3,35 @@ import './MemeWall.css';
 
 const memeGifs = [
     {
-        url: 'https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif',
+        url: 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif',
         caption: 'When SKY says "let\'s meet at 7"',
     },
     {
-        url: 'https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif',
+        url: 'https://media.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif',
         caption: 'Sarthak checking his phone at 3 AM',
     },
     {
-        url: 'https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif',
+        url: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif',
         caption: 'When someone calls instead of texting',
     },
     {
-        url: 'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif',
+        url: 'https://media.giphy.com/media/kyLYXonQYYfwYDIeZl/giphy.gif',
         caption: 'Sarthak pretending to be productive',
     },
     {
-        url: 'https://media.giphy.com/media/GrUhLU9q3nyRG/giphy.gif',
+        url: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif',
         caption: 'Birthday boy realizing he\'s getting old',
     },
     {
-        url: 'https://media.giphy.com/media/5VKbvrjxpVJCM/giphy.gif',
+        url: 'https://media.giphy.com/media/3oEjI67Egb8G9jqs3m/giphy.gif',
         caption: 'The group chat when Sarthak says something smart',
     },
     {
-        url: 'https://media.giphy.com/media/l0MYJnJQ4EiYLxvQ4/giphy.gif',
+        url: 'https://media.giphy.com/media/g9582DNuQppxC/giphy.gif',
         caption: 'SKY group celebrating Sarthak\'s birthday',
     },
     {
-        url: 'https://media.giphy.com/media/3o6fJ1BM7R2EBRDnxK/giphy.gif',
+        url: 'https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif',
         caption: 'When the birthday cake arrives',
     },
 ];
