@@ -62,7 +62,7 @@ export default function RoastSection() {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', stiffness: 150 }}
             >
-                🔥 ROAST ZONE 🔥
+                🔥 WHY HE IS 90% DRAMA AND 10% BRAIN 🔥
             </motion.h2>
 
             <motion.p

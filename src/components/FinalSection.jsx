@@ -1,8 +1,56 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import './FinalSection.css';
 
+const surpriseMessages = [
+    "You thought this was just a button? NAH! 🎉 YOU'RE THE REAL GIFT, BRO! (Even if you're wrapped weird)",
+    "SURPRISE! You're officially old enough to hurt yourself sleeping! 💀🎂",
+    "Plot twist: The real birthday present was the friends we annoyed along the way! 🥳",
+    "Breaking News: Local legend gets older, world celebrates anyway! 📰🎊",
+    "Congrats! You've unlocked: ADULT MODE (bugs included, no refunds) 🎮👴",
+];
+
 export default function FinalSection() {
+    const [showSurprise, setShowSurprise] = useState(false);
+    const [currentMessage, setCurrentMessage] = useState(0);
+
+    const handleSurpriseClick = () => {
+        setCurrentMessage(Math.floor(Math.random() * surpriseMessages.length));
+        setShowSurprise(true);
+        
+        // Massive confetti explosion  
+        const duration = 3000;
+        const end = Date.now() + duration;
+
+        const frame = () => {
+            confetti({
+                particleCount: 10,
+                angle: 60,
+                spread: 80,
+                origin: { x: 0 },
+                colors: ['#ff2d95', '#39ff14', '#fff01f', '#00fff7', '#bf00ff'],
+            });
+            confetti({
+                particleCount: 10,
+                angle: 120,
+                spread: 80,
+                origin: { x: 1 },
+                colors: ['#ff2d95', '#39ff14', '#fff01f', '#00fff7', '#bf00ff'],
+            });
+            if (Date.now() < end) requestAnimationFrame(frame);
+        };
+        frame();
+
+        // Big center burst
+        confetti({
+            particleCount: 200,
+            spread: 180,
+            origin: { y: 0.5 },
+            colors: ['#ff2d95', '#39ff14', '#fff01f', '#00fff7', '#bf00ff', '#FFD700'],
+        });
+    };
+
     const handleFinalConfetti = () => {
         const duration = 3000;
         const end = Date.now() + duration;
@@ -91,6 +139,53 @@ export default function FinalSection() {
                     <p className="signature-name">— Team SKY 🌟</p>
                 </motion.div>
 
+                {/* SURPRISE BUTTON */}
+                <motion.button
+                    className="surprise-btn"
+                    onClick={handleSurpriseClick}
+                    whileHover={{ scale: 1.1, rotate: [-3, 3, -3, 0] }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 1.4 }}
+                >
+                    🎁 CLICK FOR SURPRISE 🎁
+                </motion.button>
+
+                {/* Surprise Popup */}
+                <AnimatePresence>
+                    {showSurprise && (
+                        <motion.div
+                            className="surprise-overlay"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowSurprise(false)}
+                        >
+                            <motion.div
+                                className="surprise-popup"
+                                initial={{ scale: 0, rotate: -20 }}
+                                animate={{ scale: 1, rotate: 0 }}
+                                exit={{ scale: 0, rotate: 20 }}
+                                transition={{ type: 'spring', stiffness: 200 }}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <div className="surprise-confetti-bg">🎊🎉🥳🎈🎂</div>
+                                <h3 className="surprise-title">SURPRISE! 🎉</h3>
+                                <p className="surprise-message">{surpriseMessages[currentMessage]}</p>
+                                <div className="surprise-emoji-row">🎂🎁🥳🎊🎈</div>
+                                <button 
+                                    className="surprise-close-btn"
+                                    onClick={() => setShowSurprise(false)}
+                                >
+                                    Thanks, I'm Emotional Now 😭
+                                </button>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
                 <motion.button
                     className="final-btn"
                     onClick={handleFinalConfetti}
@@ -99,7 +194,7 @@ export default function FinalSection() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 1.5 }}
+                    transition={{ delay: 1.6 }}
                 >
                     🎉 CLICK FOR FINAL CELEBRATION 🎉
                 </motion.button>

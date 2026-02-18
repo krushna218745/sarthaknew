@@ -104,7 +104,7 @@ export default function HeroSection() {
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ type: 'spring', stiffness: 200, delay: 0.5 }}
             >
-                SARTHAK KHARCHE
+                HAPPY BIRTHDAY SARTHAK!
             </motion.h1>
 
             <motion.div
@@ -113,7 +113,17 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
             >
-                <h2 className="hero-subtitle">OFFICIALLY TURNS OLDER 💀</h2>
+                <h2 className="hero-subtitle">THE LEGEND SINCE 2006 👑</h2>
+            </motion.div>
+
+            <motion.div
+                className="hero-age-badge"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.0, type: 'spring' }}
+            >
+                <span className="age-number">20</span>
+                <span className="age-text">YEARS OF CHAOS</span>
             </motion.div>
 
             <motion.p

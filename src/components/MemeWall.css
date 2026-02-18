@@ -21,6 +21,79 @@
     margin-bottom: 50px;
 }
 
+/* Upload Section */
+.upload-section {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+}
+
+.upload-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    text-align: center;
+    color: #39ff14;
+    text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    margin-bottom: 30px;
+}
+
+.photo-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.photo-slot {
+    background: rgba(255, 255, 255, 0.03);
+    border: 3px dashed rgba(255, 45, 149, 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-slot:hover {
+    border-color: #ff2d95;
+    box-shadow: 0 0 25px rgba(255, 45, 149, 0.3);
+    background: rgba(255, 45, 149, 0.1);
+}
+
+.slot-placeholder {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.slot-emoji {
+    font-size: 3rem;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.slot-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+}
+
+/* GIF Section Title */
+.gif-section-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    text-align: center;
+    color: #fff01f;
+    text-shadow: 0 0 15px rgba(255, 240, 31, 0.4);
+    margin: 40px 0 30px 0;
+}
+
 .meme-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

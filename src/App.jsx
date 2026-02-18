@@ -7,9 +7,11 @@ import AchievementSection from './components/AchievementSection';
 import RoastSection from './components/RoastSection';
 import AwardCeremony from './components/AwardCeremony';
 import MemeWall from './components/MemeWall';
+import EvolutionTimeline from './components/EvolutionTimeline';
 import FinalSection from './components/FinalSection';
 import RandomPopups from './components/RandomPopups';
 import CursorEffects from './components/CursorEffects';
+import SarthakCharacter from './components/characters/SarthakCharacter';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,11 +30,13 @@ function App() {
         <>
           <CursorEffects />
           <RandomPopups />
+          <SarthakCharacter />
           <HeroSection />
           <TickerBanner />
           <AchievementSection />
           <AwardCeremony />
           <RoastSection />
+          <EvolutionTimeline />
           <MemeWall />
           <FinalSection />
         </>

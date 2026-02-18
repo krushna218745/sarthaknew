@@ -36,6 +36,14 @@ const memeGifs = [
     },
 ];
 
+// Placeholder slots for uploading your friend's funny photos
+const photoSlots = [
+    { caption: '📸 Add your funniest photo of him here!', emoji: '🤪' },
+    { caption: '📸 That embarrassing pic goes here', emoji: '😭' },
+    { caption: '📸 The "candid" disaster photo', emoji: '💀' },
+    { caption: '📸 His most confused face ever', emoji: '🤔' },
+];
+
 export default function MemeWall() {
     return (
         <section className="meme-wall-section">
@@ -56,6 +64,44 @@ export default function MemeWall() {
             >
                 Every GIF carefully curated to describe Sarthak's life
             </motion.p>
+
+            {/* Upload Your Photos Section */}
+            <motion.div
+                className="upload-section"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+            >
+                <h3 className="upload-title">📷 HIS FUNNY PHOTOS (Add Your Own!)</h3>
+                <div className="photo-slots-grid">
+                    {photoSlots.map((slot, index) => (
+                        <motion.div
+                            key={index}
+                            className="photo-slot"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 2 : -2 }}
+                        >
+                            <div className="slot-placeholder">
+                                <span className="slot-emoji">{slot.emoji}</span>
+                                <span className="slot-text">{slot.caption}</span>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+
+            {/* GIF Meme Grid */}
+            <motion.h3
+                className="gif-section-title"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+            >
+                🎬 REACTION GIFS THAT DESCRIBE HIM
+            </motion.h3>
 
             <div className="meme-grid">
                 {memeGifs.map((meme, index) => (
